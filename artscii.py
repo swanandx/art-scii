@@ -11,7 +11,7 @@ class Ascii_art:
 	def __init__(self, width=70):
 		self.width = width
 		self.height = 0
-		self.ASCII_CHARS_11 = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", "."]
+		self.ASCII_CHARS_10 = ["@", "%", "#", "*", "+", "=", "-", ":", ".", " "]
 		self.ASCII_CHARS_70 = ["$" , "@" , "B" , "%" , "8" , "&" , "W" , "M" , "#" , "*" , "o" , "a" , "h" , "k" , "b" , "d" , "p" , "q" , "w" , "m" , "Z" , "O" , "0" , "Q" , "L" , "C" , "J" , "U" , "Y" , "X" , "z" , "c" , "v" , "u" , "n" , "x" , "r" , "j" , "f" , "t" , "/" , "\\" , "|" , "(" , ")" , "1" , "{" , "}" , "[" , "]" , "?" , "-" , "_" , "+" , "~" , "<" , ">" , "i" , "!" , "l" , "I" , ";" , ":" , "," , "\"" , "^" , "`" , "'" , "." , " "]
 		self.max = False
 
@@ -33,7 +33,7 @@ class Ascii_art:
 		if self.max == True:
 			characters = "".join([self.ASCII_CHARS_70[pixel//4] for pixel in pixels])
 		else:
-			characters = "".join([self.ASCII_CHARS_11[pixel//25] for pixel in pixels])
+			characters = "".join([self.ASCII_CHARS_10[pixel//26] for pixel in pixels])
 		return(characters)
 
 
